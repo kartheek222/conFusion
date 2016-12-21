@@ -1,1 +1,40 @@
 /* Empty. Add your own CSS if you like */
+.radio-toolbar input[type="radio"] {
+    display:none; 
+   
+        
+}
+
+.radio-toolbar label {
+    display:inline-block;
+    background-color:#ddd;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:16px;
+}
+
+.radio-toolbar input[type="radio"]:checked + label { 
+     background-color:#bbb;
+}
+.circleBase {
+    border-radius: 5%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    
+}
+
+.circleBackground {
+    width: 10px;
+    height: 10px;
+    border: 1px solid blue;
+}
+.lineBackground {
+    
+    background: blue;
+     width: 5px;
+
+}
+.itemParentDiv{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}

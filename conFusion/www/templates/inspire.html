@@ -1,0 +1,33 @@
+<ion-view view-title="Inspire">
+  <ion-content>
+    
+    <div class="radio-toolbar" style="text-align: center;  font-size: 0;">
+        <input type="radio" id="radio1" name="radios" ng-model="dayValue" value="dayOne"  ng-change='onDayChange("dayOne")' style="padding: 5%;" checked >
+        <label for="radio1" >Day One</label>
+
+        <input type="radio" id="radio2" name="radios" ng-model="dayValue" ng-change='onDayChange("dayTwo")' style="padding: 5%;" value="dayTwo">
+        <label for="radio2">Day Two</label>
+    </div>
+   <ion-list>
+  <ion-item ng-repeat="item in agendaModels">
+      <div class="itemParentDiv">
+    <div style="float:left;">
+      <div class="circleBase circleBackground" style="float:top" >
+        
+        </div>
+         <div class="lineBackground">
+       
+        </div>
+      </div>
+          <div>
+              <p> asdf</br>
+              asdflkjas</br>
+              dfas;ldfja</br>
+              sdfj;aslkdfja</br>
+              sdf</p>
+          </div>
+          </div>
+  </ion-item>
+</ion-list>
+  </ion-content>
+</ion-view>

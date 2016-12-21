@@ -24,7 +24,6 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers','conFusion.service
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
     .state('app', {
     url: '/app',
     abstract: true,
@@ -59,7 +58,15 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers','conFusion.service
         }
       }
     })
-
+ .state('app.inspire', {
+      url: '/inspire',
+      views: {
+        'mainContent': {
+          templateUrl: 'templates/inspire.html',
+          controller: 'InspireController'
+        }
+      }
+    })
     .state('app.menu', {
       url: '/menu',
       views: {

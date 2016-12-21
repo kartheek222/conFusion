@@ -176,6 +176,27 @@ angular.module('conFusion.controllers', [])
                         $scope.promotion = menuFactory.getPromotion().get({id:0});
       }])
 
+      // implement the IndexController and About Controller here
+
+    .controller('InspireController', ['$scope', 'menuFactory', 'corporateFactory',function($scope, menuFactory, corporateFactory) {
+            
+        $scope.agendaModels=[];
+            var getRandomSpan = function(){
+                    return Math.floor((Math.random()*6)+1);
+                };
+        $scope.onDayChange= function(value){
+            console.log(value+" click Randum number : "+getRandomSpan());
+            var count=getRandomSpan();
+            for(var index=0;index<count;index++){
+                $scope.agendaModels.push(index);
+            }
+            
+        };
+       
+            
+      }])
+
+
         .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
             
                     $scope.leaders = corporateFactory.query();
