@@ -199,7 +199,15 @@ angular.module('conFusion.controllers', [])
 
         .controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
             
-                    $scope.leaders = corporateFactory.query();
-                    console.log($scope.leaders);
-            
+                    $scope.leaders = corporateFactory.query(
+                        function(response) { 
+                            console.log("success response : "+response);
+                            $scope.leaderships = response;
+                },
+                function(response) {
+                    $scope.message = "Error: "+response.status + " " + response.statusText;
+                }
+                    );
+                    console.log($scope.leaders.promises);
+                    
                     }]);
